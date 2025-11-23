@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="100%" height="100%" rx="16" fill="#07121a"/>
+  <g transform="translate(48,48)">
+    <rect x="10" y="10" width="320" height="200" rx="10" fill="#07242a" stroke="#00e0ff" opacity="0.08"/>
+    <g transform="translate(360,20)">
+      <rect x="0" y="0" width="340" height="180" rx="10" fill="#07242a"/>
+      <circle cx="60" cy="60" r="28" fill="#6a6aff" opacity="0.9"/>
+      <rect x="120" y="44" width="160" height="36" rx="8" fill="#00aaff" opacity="0.12"/>
+    </g>
+  </g>
+  <text x="56" y="320" fill="#9fe8ff" font-family="Inter, Arial" font-size="18">Plan — milestones & backlog</text>
+</svg>

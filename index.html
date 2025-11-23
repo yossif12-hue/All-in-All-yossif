@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All-in-All — Yossif Alkfas</title>
+  <meta name="description" content="All-in-All — Mobile & Web Development. Yossif Alkfas" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="canvas-wrap">
+    <canvas id="bg-canvas"></canvas>
+  </div>
+
+    <!-- Welcome banner for visitors -->
+    <div id="welcome-banner" class="welcome-banner hide" role="dialog" aria-live="polite">
+      <div class="welcome-inner">
+        <div class="welcome-text" data-i18n="welcome_msg">Welcome! Glad you're here — explore services or ask the assistant.</div>
+        <div class="welcome-actions">
+          <button id="wb-close" class="btn ghost" data-i18n="welcome_dismiss">Dismiss</button>
+          <button id="wb-cta" class="btn primary" data-i18n="welcome_cta">Explore Services</button>
+        </div>
+      </div>
+    </div>
+
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <h1>Yossif Alkfas</h1>
+      <p data-i18n="splash_sub">Welcome — تطوير حلول برمجية احترافية</p>
+    </div>
+  </div>
+
+  <!-- Emoji welcome bubble (first-time visitors) -->
+  <div id="emoji-welcome" class="emoji-welcome hide" role="button" aria-live="polite" aria-label="Welcome">
+    <div class="emoji">👋</div>
+    <div class="emoji-text" data-i18n="welcome_msg">Welcome! Glad you're here.</div>
+  </div>
+
+    <header id="top" class="nav">
+    <div class="brand">All-in-All <span class="logo">🌐</span></div>
+    <nav>
+      <a href="#hero" data-i18n="nav_home">Home</a>
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#tech" data-i18n="nav_tech">Tech</a>
+      <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+      <a href="#how" data-i18n="nav_how">How we work</a>
+      <a href="#cases" data-i18n="nav_cases">Cases</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="ar">🇸🇦</button>
+      <button class="lang-btn active" data-lang="en">🇬🇧</button>
+      <button class="lang-btn" data-lang="fr">🇫🇷</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="container">
+        <h2 data-i18n="hero_title">All-in-All — حلول برمجية متكاملة</h2>
+        <p class="lead" data-i18n="hero_sub">Build modern mobile & web apps with performance and UX-first design.</p>
+        <div class="hero-visual">
+          <img src="img/animated-robot.svg" class="animated-img" alt="Animated robot illustration" aria-hidden="true">
+        </div>
+        <div class="hero-actions">
+          <button class="btn primary" id="open-service" data-i18n="cta_request">Request Service</button>
+          <button class="btn ghost" id="get-location" data-i18n="cta_location">Get Location</button>
+        </div>
+        <div id="location-info" class="card small hide"></div>
+      </div>
+    </section>
+
+    <!-- Services (separate section) -->
+    <section id="services" class="section">
+      <div class="container">
+        <h3 data-i18n="services_title">Services</h3>
+        <div class="grid services-grid">
+          <div class="card service">
+            <div class="icon">📱</div>
+            <div class="meta"><strong data-i18n="svc_mobile">Mobile Apps</strong><p class="muted">Native, Flutter, Dart.</p></div>
+          </div>
+          <div class="card service">
+            <div class="icon">🌐</div>
+            <div class="meta"><strong data-i18n="svc_web">Web Apps</strong><p class="muted">SPA, PWA.</p></div>
+          </div>
+          <div class="card service">
+            <div class="icon">🎨</div>
+            <div class="meta"><strong data-i18n="svc_front">Front-end</strong><p class="muted">UI/UX and animations.</p></div>
+          </div>
+          <div class="card service">
+            <div class="icon">🔧</div>
+            <div class="meta"><strong data-i18n="svc_back">Back-end</strong><p class="muted">APIs, DB.</p></div>
+          </div>
+          <div class="card service">
+            <div class="icon">🚀</div>
+            <div class="meta"><strong data-i18n="svc_devops">DevOps</strong><p class="muted">CI/CD, Cloud.</p></div>
+          </div>
+          <div class="card service">
+            <div class="icon">🧩</div>
+            <div class="meta"><strong data-i18n="svc_problem">Problem Solving</strong><p class="muted">Architecture & debugging.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies (separate section) -->
+    <section id="tech" class="section">
+      <div class="container">
+        <h3 data-i18n="tech_title">Technologies</h3>
+        <div class="grid tech-grid">
+          <div class="card tech"><div class="icon">🐍</div><div class="meta"><strong>Python</strong><p class="muted">Backend, automation.</p></div></div>
+          <div class="card tech"><div class="icon">🌐</div><div class="meta"><strong>HTML/CSS</strong><p class="muted">Responsive layouts.</p></div></div>
+          <div class="card tech"><div class="icon">☕</div><div class="meta"><strong>Java</strong><p class="muted">Enterprise systems.</p></div></div>
+          <div class="card tech"><div class="icon">⚡</div><div class="meta"><strong>JavaScript</strong><p class="muted">Client & server.</p></div></div>
+          <div class="card tech"><div class="icon">🗄️</div><div class="meta"><strong>SQL</strong><p class="muted">Data modelling.</p></div></div>
+          <div class="card tech"><div class="icon">🦋</div><div class="meta"><strong>Flutter</strong><p class="muted">Cross-platform UI.</p></div></div>
+          <div class="card tech"><div class="icon">🎯</div><div class="meta"><strong>Dart</strong><p class="muted">Flutter language.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio (separate section) -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <h3 data-i18n="portfolio_title">Portfolio</h3>
+        <div class="grid portfolio-grid">
+          <div class="card project">
+            <div class="icon">🖥️</div>
+            <strong>Project A</strong>
+            <p class="muted">A responsive PWA with offline support.</p>
+          </div>
+          <div class="card project">
+            <div class="icon">📱</div>
+            <strong>Project B</strong>
+            <p class="muted">Native mobile app with secure auth.</p>
+          </div>
+          <div class="card project">
+            <div class="icon">📊</div>
+            <strong>Project C</strong>
+            <p class="muted">Analytics dashboard and API backend.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we work (separate section) -->
+    <section id="how" class="section">
+      <div class="container">
+        <h3 data-i18n="how_title">How We Work</h3>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+          <div class="card">
+            <div class="icon">🔍</div>
+            <strong>Discover</strong>
+            <p class="muted">We gather requirements and goals.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🗂️</div>
+            <strong>Plan</strong>
+            <p class="muted">Define scope and milestones.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎨</div>
+            <strong>Design</strong>
+            <p class="muted">UX and visual design.</p>
+          </div>
+          <div class="card">
+            <svg width="48" height="48"><rect x="6" y="10" width="36" height="28" rx="4" fill="#ffb86b"/></svg>
+            <strong>Develop</strong>
+            <p class="muted">Build, test, iterate.</p>
+          </div>
+          <div class="card">
+            <svg width="48" height="48"><circle cx="24" cy="24" r="10" fill="#d77aff"/></svg>
+            <strong>Deliver</strong>
+            <p class="muted">Deploy and monitor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies (separate section) -->
+    <section id="cases" class="section">
+      <div class="container">
+        <h3 data-i18n="cases_title">Problem Solving</h3>
+        <div class="grid cases-grid">
+          <div class="card"><strong>Performance</strong><p class="muted">Reduced page load by 60% via optimization.</p></div>
+          <div class="card"><strong>Scaling</strong><p class="muted">Migrated to autoscaling infra.</p></div>
+          <div class="card"><strong>Security</strong><p class="muted">Implemented secure auth and audits.</p></div>
+          <div class="card"><strong>Integration</strong><p class="muted">Connected third-party APIs reliably.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (separate section) -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h3 data-i18n="contact_title">Contact</h3>
+        <div class="contact-cards">
+          <div class="card contact"><svg width="28" height="28"><circle cx="14" cy="10" r="6" fill="#00aaff"/><rect x="4" y="18" width="20" height="6" rx="3" fill="#0b2a33"/></svg><div><strong>Yossif Alkfas</strong><p class="muted">Lead Developer</p></div></div>
+          <div class="card contact"><svg width="28" height="28"><rect x="4" y="6" width="20" height="12" rx="3" fill="#6a6aff"/></svg><div><strong>Phone</strong><p class="muted">01270903132</p></div></div>
+          <div class="card contact"><svg width="28" height="28"><path d="M4 6 L24 18" stroke="#8ae6c6" stroke-width="2"/></svg><div><strong>Email</strong><p class="muted">add06591@gmail.com</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> All-in-All — Yossif Alkfas</div>
+  </footer>
+
+  <!-- Service Modal -->
+  <div id="modal" class="modal hide">
+    <div class="modal-panel">
+      <button class="modal-close" id="close-modal">×</button>
+      <h4 data-i18n="modal_title">Service Request</h4>
+      <form id="service-form">
+        <label data-i18n="field_name">Name</label>
+        <input name="name" required />
+        <label data-i18n="field_email">Email</label>
+        <input name="email" type="email" required />
+        <label data-i18n="field_service">Service</label>
+        <select name="service">
+          <option>Mobile App</option>
+          <option>Web App</option>
+          <option>DevOps</option>
+        </select>
+        <label data-i18n="field_message">Message</label>
+        <textarea name="message"></textarea>
+        <button class="btn primary" type="submit" data-i18n="send">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Image Modal / Lightbox for illustrations -->
+  <div id="img-modal" class="modal hide">
+    <div class="modal-panel">
+      <button class="modal-close" id="close-img-modal">×</button>
+      <div class="img-panel">
+        <img id="img-modal-img" src="" alt="Illustration">
+        <div class="img-caption" id="img-modal-caption"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Assistant -->
+  <div id="chat-btn" class="chat-btn">
+    <div class="pulse"></div>
+    <button id="open-chat">💬</button>
+  </div>
+  <div id="chat-window" class="chat-window hide">
+    <div class="chat-header">Assistant</div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg bot">Hello! How can I help?</div>
+    </div>
+    <div class="chat-actions">
+      <button class="quick" data-q="services">Services</button>
+      <button class="quick" data-q="prices">Pricing</button>
+      <button class="quick" data-q="contact">Contact</button>
+      <button class="quick" data-q="problem">Problem Solver</button>
+    </div>
+    <div class="chat-footer">
+      <input id="chat-input" placeholder="Type your question or problem here..." />
+      <button id="send-chat">Send</button>
+    </div>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
